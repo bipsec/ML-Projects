@@ -31,3 +31,8 @@ This is an audio classification notebook for the Emo-DB Database. I have perform
 
 Notebook Link: https://www.kaggle.com/code/biplabkumarsarkar/eda-on-speech-emotion?scriptVersionId=173457703 <br>
 Dataset Link: https://www.kaggle.com/datasets/piyushagni5/berlin-database-of-emotional-speech-emodb/data
+
+
+New Dataset Name: SUBESCO-Bangla Speech Emotion Dataset <br>
+New Dataset Link: https://www.kaggle.com/datasets/sushmit0109/subescobangla-speech-emotion-dataset/code?datasetId=2110338&sortBy=voteCount <br>
+Another Dataset Link: https://www.kaggle.com/competitions/elec-378-sp2023-speech-emotion-classification/data
