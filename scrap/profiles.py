@@ -7,23 +7,19 @@ def scrape_profile_data(url):
     try:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
-
-        # Find elements containing profile data
         profiles = soup.find_all('body', class_='home-page')
 
         data = []
         for profile in profiles:
             name = profile.find('h1').text.strip().split()
-            # Find email image
             email_image = profile.find('img', class_='email-image')
             if email_image:
                 email_text = email_image.get('alt', '').split('email', 1)[
-                    -1].strip()  # Extract email after the word "email"
-                email = email_text.split(' ')[0]  # Take the first word after "email"
+                    -1].strip()
+                email = email_text.split(' ')[0]
             else:
                 email = ''
 
-            # Find panel-body inside profile for research information
             panel_body = profile.find('div', class_='panel-body')
             if panel_body:
                 p_tags = panel_body.find_all('p')
