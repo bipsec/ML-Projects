@@ -29,16 +29,17 @@ def scrape_profile_data(url):
 
             else:
                 research_text = ''
+            uni_name = 'Texas State University'
 
-            data.append([name, email, research_text])
+            data.append([name, email, research_text, uni_name])
 
         return data
     except Exception as e:
         print("An exception happened while scraping:", e)
 
 
-def save_to_csv(data, filename='profile_data.csv'):
-    df = pd.DataFrame(data, columns=['Name', 'Email', 'Research'])
+def save_to_csv(data, filename='scrap/data/profile_data.csv'):
+    df = pd.DataFrame(data, columns=['Name', 'Email', 'Research', 'Varsity'])
     df.to_csv(filename, index=False)
 
 
